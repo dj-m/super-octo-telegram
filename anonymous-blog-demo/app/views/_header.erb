@@ -1,0 +1,26 @@
+<div id="wrapper">
+  <div id="menu-wrapper">
+    <div id="menu">
+      <ul>
+        <li class="current_page_item"><a href="/entries">Home</a></li>
+
+        <% if logged_in? %>
+          <li><a href='/users/<%= session[:user_id] %>/entries'>Your Entries</a></li>
+          <li><a href="/users/logout">Log Out</a></li>
+        <% else %>
+          <li><a href="/users/new">Register</a></li>
+          <li><a href="/login">Login</a></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div id="header-wrapper">
+    <% if logged_in? %>
+      <h3>TAMBLR.</h3>
+    <% else %>
+      <h3></h3>
+    <% end %>
+  </div>
+</div>
+<div class="container">

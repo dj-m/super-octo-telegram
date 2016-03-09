@@ -1,0 +1,11 @@
+<h1><%= @post.title %></h1>
+<h3>Link: <%= @post.url %></h3>
+<h3><a href="/posts/<%= @post.id %>/comments/new">Add a new comment</a></h3>
+<p>comments:</p>
+<% @comments.each do |comment| %>
+ <%=erb :'/comments/_comment_vote_button', locals: { comment: comment, post: @post }%>
+ <div id="comment-vote-container<%=comment.id%>">
+   <%=erb :'/comments/_vote_count', locals: { comment: comment }%>
+ </div>
+ <%= comment.content %><br>
+<% end %>

@@ -1,0 +1,16 @@
+<h1>Nacker Hews?</h1>
+<% if current_user %>
+  <h5><a href="/users/<%= session[:user_id] %>">Your Profile</a>
+  <h5><a href="/logout">Log Out</a></h5>
+  <h3><a href="/posts/new">Create New Post</a></h3>
+
+  <% @posts.each do |post| %>
+    <h4><%= erb :'/posts/_vote_button', locals: {post: post}%>
+      <div id="post-vote-container<%=post.id%>">
+        <%=erb :'/posts/_vote_count', locals: { post: post }%></div> <%= post.title %></h4>
+    <p>Posted by: <%= post.user.username %> | <a href="/posts/<%= post.id %>/comments"><%=post.comments.count%> Comments</a></p>
+  <% end %>
+
+<% else %>
+  <h3><a href="/login">Login</a> | <a href="/register">Register</a></h3>
+<% end %>

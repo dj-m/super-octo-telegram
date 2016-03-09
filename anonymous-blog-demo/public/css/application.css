@@ -1,0 +1,91 @@
+body {
+  /*background: #B3BAC6;*/
+  height: 100%;
+}
+
+.container {
+  margin: 40px auto;
+  width: 800px;
+  padding: 0px 20px 20px 20px;
+  /*border: 4px solid #262746;*/
+}
+
+th {
+  text-align: left;
+}
+
+.spacer {
+  height: 15px;
+}
+
+.profile_header {
+  text-align: center;
+}
+
+.new_post_form {
+  margin: 0px auto;
+  width: 450px;
+  background: #B3BAC6;
+  border: 3px solid #262746;
+  padding: 5px;
+}
+
+
+/* Header CSS formatting */
+#menu-wrapper{
+  background: #8e44ad;
+}
+
+#menu {
+  overflow: hidden;
+  height: 100px;
+}
+
+#menu ul {
+  margin: 0;
+  padding: 0px;
+  text-align: center;
+}
+
+#menu li {
+  display: inline-block;
+}
+
+#menu a {
+  display: block;
+  letter-spacing: 1px;
+  padding: 0px 40px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.60em;
+  line-height: 100px;
+  border: none;
+  color: #FFF;
+}
+
+#header-wrapper{
+  overflow: hidden;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  height: 80px;
+  background: #9b59b6;
+  color: #ecf0f1;
+}
+
+#menu a:hover, #menu .current_page_item a {
+  text-decoration: none;
+}
+
+#menu .current_page_item a {
+  background: #B3BAC6;
+}
+
+.footer {
+    background: #ffab62;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

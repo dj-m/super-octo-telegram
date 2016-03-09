@@ -1,0 +1,18 @@
+<h1>Edit entry</h1>
+<form method="post" action='/entries/<%=@entry.id%>'>
+  <input type="hidden" name="_method" id="" value="put"/>
+
+  <label>Title:</label>
+  <input type="text" name="entry[title]" value="<%=@entry.title%>"/>
+  <div class="spacer"></div>
+
+  <label>Content:</label>
+  <input type="text" name="entry[content]"value="<%=@entry.content%>"/>
+  <div class="spacer"></div>
+
+  <label>Tag:</label>
+  <input type="text" name="tag[name]"/>
+  <div class="spacer"></div>
+
+  <input type="submit" value="Edit entry"/>
+</form>

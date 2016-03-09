@@ -1,0 +1,26 @@
+<% if logged_in? %>
+  <h3><a href="/entries/new">Create new Entry</a></h3>
+
+  <h1>Post Entries:</h1>
+  <% @entries.each do |entry| %>
+    <h2><a href="/entries/<%=entry.id%>"><%= entry.title %></a></h2>
+
+    <p><%= entry.content %></p>
+    <% entry.tags.each do |tag| %>
+      <h6><a href="/tags/<%= tag.id %>">Tags: <%= tag.name %></a></h6>
+    <% end %>
+
+    <h6>created at: <%=entry.created_at%></h6>
+    <button><a href="/entries/<%=entry.id%>/edit">Edit Entry</a></button>
+    <div class="spacer"></div>
+    <form method="post" action ="/entries/<%=entry.id%>">
+      <input type="hidden" name="_method" value="delete"/>
+      <input type="submit" value="Delete Post"/>
+    </form>
+
+  <% end %>
+
+<% else %>
+  <h1> TAMBLR </h1>
+  <h6>not a tumblr clone i swear ok</h6>
+<% end %>

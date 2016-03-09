@@ -1,0 +1,11 @@
+<h1><%=@user.username%>'s Profile</h1>
+
+<h2>Your post history:</h2>
+<% @posts.each do |post| %>
+  <%= post.title %><br>
+<% end %>
+
+<h2>Your comment history:</h2>
+<% @comments.each do |comment| %>
+  <%= comment.content %><br>
+<% end %>
